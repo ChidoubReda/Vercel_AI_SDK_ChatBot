@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
 import { generateText, streamText } from 'ai';
 import { mistral } from '@ai-sdk/mistral';
+import { groq } from '@ai-sdk/groq';
 import {z} from 'zod';
 
 async function main() {
@@ -24,7 +25,7 @@ async function main() {
     }); 
     if (result.toolResults && result.toolCalls) {
         const joke = await streamText({
-            model: mistral('mistral-tiny'),
+            model: groq('qwen-qwq-32b'),
             prompt: 'Tell me a joke about ${location} and its current temperature (${result.toolResults[0].result.temperature})', 
         });
         for await (const textPart of joke.textStream) {

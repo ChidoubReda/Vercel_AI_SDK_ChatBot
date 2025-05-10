@@ -1,10 +1,11 @@
-import { streamText } from "ai";
+import { type CoreMessage, streamText } from "ai";
 import { mistral } from '@ai-sdk/mistral';
+import { groq } from '@ai-sdk/groq';
 
 export async function POST(request: Request) {
-  const { messages } = await request.json();
+  const { messages }: { messages: CoreMessage[] } = await request.json();
   const stream = await streamText({
-    model: mistral('mistral-tiny'),
+    model: groq('qwen-qwq-32b'),
     system: "You are a helpful assistant.",
     messages,
   });

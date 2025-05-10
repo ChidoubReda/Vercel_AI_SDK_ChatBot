@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { useChat } from "@ai-sdk/react";
 
@@ -21,4 +21,9 @@ export default function Chat() {
       </form>
     </div>
   );
+}*/
+import { ChatForm } from "@/components/chat-form"
+
+export default function Page() {
+  return <ChatForm />
 }
