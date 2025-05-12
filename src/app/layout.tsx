@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "OpenAI and AI SDK Chatbot",
-  description: "A simple chatbot built using the AI SDK and gpt-4o-mini.",
+  description: "A simple chatbot built using the AI SDK and groq.",
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

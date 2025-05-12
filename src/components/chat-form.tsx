@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useChat } from "ai/react"
+import { useChat } from "@ai-sdk/react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip"
 import { AutoResizeTextarea } from "@/components/ui/autoresize-textarea"
@@ -30,13 +30,13 @@ export function ChatForm({ className = "", ...props }: React.ComponentProps<"for
 
   const header = (
     <header className="m-auto flex max-w-96 flex-col gap-5 text-center">
-      <h1 className="text-2xl font-semibold leading-none tracking-tight">Basic AI Chatbot Template</h1>
+      <h1 className="text-2xl font-semibold leading-none tracking-tight">Basic AI Chatbot</h1>
       <p className="text-sm text-muted-foreground">
         This is an AI chatbot app template built with <span className="text-foreground">Next.js</span>, the{" "}
         <span className="text-foreground">Vercel AI SDK</span>, and <span className="text-foreground">Vercel KV</span>.
       </p>
       <p className="text-sm text-muted-foreground">
-        Connect an API Key from your provider and send a message to get started.
+        Send a message to get started.
       </p>
     </header>
   )
